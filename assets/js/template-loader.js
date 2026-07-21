@@ -1,14 +1,14 @@
 async function loadTemplates() {
   const templateNodes = document.querySelectorAll("[data-template]");
 
-  await Promise.all(
-    Array.from(templateNodes).map(async (node) => {
-      const templatePath = node.getAttribute("data-template");
+  for (const node of templateNodes) {
+    const templatePath = node.getAttribute("data-template");
 
-      if (!templatePath) {
-        return;
-      }
+    if (!templatePath) {
+      continue;
+    }
 
+    try {
       const response = await fetch(templatePath, { cache: "no-store" });
 
       if (!response.ok) {
@@ -20,8 +20,10 @@ async function loadTemplates() {
 
       wrapper.innerHTML = html.trim();
       node.replaceWith(...wrapper.childNodes);
-    })
-  );
+    } catch (error) {
+      console.error(error);
+    }
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
