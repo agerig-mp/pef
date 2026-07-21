@@ -213,7 +213,6 @@ h6,
 }
 
 .solutions-copy {
-  max-width: 30rem;
   font-size: 1rem;
   line-height: 1.7;
   text-wrap: pretty;
@@ -1072,10 +1071,12 @@ h6,
 }
 
 .service-card {
+  position: relative;
   width: 100%;
   max-width: 24rem;
   margin-inline: auto;
   aspect-ratio: 1 / 1;
+  min-height: 0;
   border: 0;
   overflow: hidden;
   box-shadow: var(--pef-shadow);
@@ -1083,6 +1084,9 @@ h6,
 }
 
 .service-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.35s ease;
@@ -1309,11 +1313,13 @@ h6,
 }
 
 .category-benefit h3 {
-  margin: 0.55rem 0 0.35rem;
+  margin: 0.55rem 0 0.45rem;
   color: #fff;
   font-family: var(--pef-heading-font);
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
 }
 
 .category-benefit p {
@@ -1710,6 +1716,16 @@ h6,
   text-wrap: balance;
 }
 
+.stats-reason-panel .stats-reason-number {
+  margin-bottom: 0.4rem;
+  color: #ffd25a;
+  font-size: clamp(2.35rem, 3.25vw, 3.15rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
 .stats-reason-panel p {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.8);
@@ -1720,6 +1736,10 @@ h6,
 @media (max-width: 991.98px) {
   .stats-section {
     background-attachment: scroll;
+  }
+
+  .stats-reason-panel .stats-reason-number {
+    font-size: clamp(2.3rem, 8vw, 3rem);
   }
 
   .locations-section {
