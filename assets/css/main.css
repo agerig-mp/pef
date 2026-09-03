@@ -1567,6 +1567,60 @@ h6,
   color: rgba(255, 255, 255, 0.76) !important;
 }
 
+.help-venn-panel {
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.75rem;
+}
+
+.help-venn svg {
+  display: block;
+  width: min(100%, 30rem);
+  height: auto;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.help-venn-circle {
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 2.5;
+  opacity: 0.82;
+}
+
+.help-venn-product {
+  fill: #ffd25a;
+}
+
+.help-venn-material {
+  fill: #ff6f7a;
+}
+
+.help-venn-equipment {
+  fill: #58afff;
+}
+
+.help-venn-label {
+  fill: #082348;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.65);
+  stroke-linejoin: round;
+  stroke-width: 3px;
+}
+
+.help-venn-center {
+  fill: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: rgba(8, 35, 72, 0.8);
+  stroke-linejoin: round;
+  stroke-width: 3px;
+}
+
 .help-card {
   position: relative;
   overflow: hidden;
