@@ -18,9 +18,22 @@
                   Product, material, and equipment overlap to create an optimized packaging setup.
                 </p>
                 <svg viewBox="0 0 340 300" aria-hidden="true" focusable="false">
+                  <defs>
+                    <clipPath id="home-venn-product-clip">
+                      <circle cx="125" cy="115" r="92"></circle>
+                    </clipPath>
+                    <clipPath id="home-venn-material-clip">
+                      <circle cx="215" cy="115" r="92"></circle>
+                    </clipPath>
+                  </defs>
                   <circle class="help-venn-circle help-venn-product" cx="125" cy="115" r="92"></circle>
                   <circle class="help-venn-circle help-venn-material" cx="215" cy="115" r="92"></circle>
                   <circle class="help-venn-circle help-venn-equipment" cx="170" cy="195" r="92"></circle>
+                  <g clip-path="url(#home-venn-product-clip)">
+                    <g clip-path="url(#home-venn-material-clip)">
+                      <circle cx="170" cy="195" r="92" fill="#383238"></circle>
+                    </g>
+                  </g>
                   <text class="help-venn-label" x="50" y="104">Product</text>
                   <text class="help-venn-label" x="222" y="104">Material</text>
                   <text class="help-venn-label" x="122" y="246">Equipment</text>
